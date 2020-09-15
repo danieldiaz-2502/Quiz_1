@@ -22,7 +22,7 @@ public class registro_activity extends AppCompatActivity implements View.OnClick
         continuarBoton = findViewById(R.id.continuarBoton);
         nombreEdit = findViewById(R.id.nombreEdit);
         identiEdit = findViewById(R.id.identiEdit);
-
+//hola
         continuarBoton.setOnClickListener(this);
     }
 
