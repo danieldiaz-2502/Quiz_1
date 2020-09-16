@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class preguntas1_activity extends AppCompatActivity implements View.OnClickListener {
+public class activity_preguntas2 extends AppCompatActivity implements View.OnClickListener {
 
     private Button continuarBoton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_preguntas1_activity);
-
+        setContentView(R.layout.activity_preguntas2);
         continuarBoton = findViewById(R.id.continuarBoton);
 
         continuarBoton.setOnClickListener(this);
@@ -27,7 +26,7 @@ public class preguntas1_activity extends AppCompatActivity implements View.OnCli
         switch (v.getId()){
 
             case R.id.registrarBoton:
-                Intent i = new Intent(this, activity_preguntas2.class);
+                Intent i = new Intent(this, MainActivity.class);
                 startActivity(i);
 
         }

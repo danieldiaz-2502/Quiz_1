@@ -7,7 +7,7 @@
     tools:context=".preguntas1_activity">
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox1"
         android:layout_width="280dp"
         android:layout_height="37dp"
         android:layout_marginBottom="20dp"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="100dp"
         android:background="#FF177C"
         android:text="Continuar"
         android:textAllCaps="false"
@@ -79,7 +79,7 @@
         android:id="@+id/checkBox5"
         android:layout_width="280dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="100dp"
         android:text="Ninguna de las anteriores"
         app:layout_constraintBottom_toTopOf="@+id/continuarBoton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Elige las opciones que apliquen a tu caso"
+        android:text="Elige las opciones que apliquen a tu caso:"
         android:textColor="#A3A3A3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
