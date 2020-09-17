@@ -79,11 +79,12 @@
         android:id="@+id/checkBox5"
         android:layout_width="280dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="260dp"
         android:text="Ninguna de las anteriores"
-        app:layout_constraintBottom_toTopOf="@+id/continuarBoton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView5"
@@ -93,6 +94,7 @@
         android:text="Elige las opciones que apliquen a tu caso:"
         android:textColor="#A3A3A3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
