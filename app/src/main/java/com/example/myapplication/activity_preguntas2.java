@@ -44,7 +44,7 @@ public class activity_preguntas2 extends AppCompatActivity implements View.OnCli
                 case R.id.continuarBoton:
                     Intent i = new Intent(this, MainActivity.class);
                     startActivity(i);
-
+                    break;
             }
         }
     }

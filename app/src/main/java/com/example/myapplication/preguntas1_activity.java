@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,7 +21,7 @@ public class preguntas1_activity extends AppCompatActivity implements View.OnCli
     private CheckBox checkBox3;
     private CheckBox checkBox4;
     private CheckBox checkBox5;
-    private int puntaje;
+    private int puntaje = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,32 +41,33 @@ public class preguntas1_activity extends AppCompatActivity implements View.OnCli
         if (checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked() || checkBox4.isChecked() || checkBox5.isChecked()) {
             continuarBoton.setBackgroundColor(Color.rgb(255, 23, 124));
         }
-
-        numeroPrueba.setText(" " + (int) puntaje);
-
+        String username = getSharedPreferences("nombre", MODE_PRIVATE).getString("username", "no user");
+        numeroPrueba.setText(" " + puntaje);
         continuarBoton.setOnClickListener(this);
-        if (checkBox1.isChecked()){
-            puntaje += 3;
-        }
 
     }
 
     @Override
     public void onClick(View v) {
-
-            puntaje += 3;
-
         //Para que no pase a la siguiente actividad a menos que haya checado por los menos un checkbox
-        if (checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked() || checkBox4.isChecked() || checkBox5.isChecked()) {
             continuarBoton.setBackgroundColor(Color.rgb(255,23,124));
             switch (v.getId()) {
 
                 case R.id.continuarBoton:
-                    Intent i = new Intent(this, activity_preguntas2.class);
-                    startActivity(i);
+                    if (checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked() || checkBox4.isChecked() || checkBox5.isChecked()) {
+                        Intent i = new Intent(this, activity_preguntas2.class);
+                        startActivity(i);
+                    }
+                    break;
+                case R.id.checkBox1:
+                    checkBox1.isChecked();
+                    if (checkBox1.isChecked()){
+                        puntaje += 3;
+                        Toast.makeText(getApplicationContext(),puntaje,Toast.LENGTH_SHORT).show();
+                    }
                     break;
 
             }
+        Log.e(" ", String.valueOf(puntaje));
         }
     }
-}
