@@ -37,7 +37,7 @@ public class activity_preguntas2 extends AppCompatActivity implements View.OnCli
         checkBox5 = (CheckBox) findViewById(R.id.checkBox5);
         checkBox6 = (CheckBox) findViewById(R.id.checkBox4);
         checkBox7 = (CheckBox) findViewById(R.id.checkBox1);
-
+        //combina el puntaje con el registro guardado anterior
         puntaje = getSharedPreferences("puntos", MODE_PRIVATE).getInt("puntaje", 0);
         registro = getSharedPreferences("nombres", MODE_PRIVATE).getString("registros", "no user");
         continuarBoton.setOnClickListener(this);

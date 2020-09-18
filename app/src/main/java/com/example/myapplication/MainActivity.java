@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for(int i = 0; i < lista.length; i++){
             personasText.append(lista[i] + "\n");
         }
-
+        //se ponen los textos en el cuadro en la app
         personasText.setText(registros);
     }
 

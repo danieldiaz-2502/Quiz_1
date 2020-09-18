@@ -39,7 +39,7 @@ public class registro_activity extends AppCompatActivity implements View.OnClick
                 String id = identiEdit.getText().toString();
 
                 SharedPreferences preferences = getSharedPreferences("nombres", MODE_PRIVATE);
-
+                //se guarda el nombre y el id del usuario
                 String registro = username + " " + id;
 
                 preferences.edit().putString("registros", registro).apply();

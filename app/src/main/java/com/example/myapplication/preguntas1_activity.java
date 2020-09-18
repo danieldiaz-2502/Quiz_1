@@ -14,8 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class preguntas1_activity extends AppCompatActivity implements View.OnClickListener {
-
-    private TextView numeroPrueba;
+    
     private Button continuarBoton;
     private CheckBox checkBox1;
     private CheckBox checkBox2;
@@ -30,7 +29,6 @@ public class preguntas1_activity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_preguntas1_activity);
 
         continuarBoton = findViewById(R.id.continuarBoton);
-        numeroPrueba = findViewById(R.id.numeroPrueba);
         checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
         checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
         checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
