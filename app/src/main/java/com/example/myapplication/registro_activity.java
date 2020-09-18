@@ -24,6 +24,7 @@ public class registro_activity extends AppCompatActivity implements View.OnClick
         nombreEdit = findViewById(R.id.nombreEdit);
         identiEdit = findViewById(R.id.identiEdit);
         continuarBoton.setOnClickListener(this);
+
     }
 
     @Override
@@ -33,11 +34,16 @@ public class registro_activity extends AppCompatActivity implements View.OnClick
 
             case R.id.continuarBoton:
                 Intent i = new Intent(this, preguntas1_activity.class);
-                startActivity(i);
-                String username = nombreEdit.getText().toString();
-                SharedPreferences preferences = getSharedPreferences("nombre", MODE_PRIVATE);
 
-                preferences.edit().putString("username", username).apply();
+                String username = nombreEdit.getText().toString();
+                String id = identiEdit.getText().toString();
+
+                SharedPreferences preferences = getSharedPreferences("nombres", MODE_PRIVATE);
+
+                String registro = username + " " + id;
+
+                preferences.edit().putString("registros", registro).apply();
+                startActivity(i);
 
                 break;
         }

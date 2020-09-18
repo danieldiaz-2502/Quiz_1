@@ -27,6 +27,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences preferences = getSharedPreferences("nombres", MODE_PRIVATE);
+        String registros = preferences.getString("registroFinal", "no hay");
+
+        //Para dividir los usuarios que completan la encuesta en una lista
+        String[] lista = registros.split(":");
+
+        for(int i = 0; i < lista.length; i++){
+            personasText.append(lista[i] + "\n");
+        }
+
+        personasText.setText(registros);
+    }
+
+    @Override
     public void onClick(View v) {
 
         switch (v.getId()){
